@@ -1,12 +1,12 @@
-FROM python:2.7
-MAINTAINER binux <roy@binux.me>
+FROM python:3.6.4
+MAINTAINER shiyongjiang <shiyongjiang2011@163.com>
 
 # install phantomjs
 RUN mkdir -p /opt/phantomjs \
         && cd /opt/phantomjs \
-        && wget -O phantomjs.tar.bz2 https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 \
+        && wget -O phantomjs.tar.bz2 https://github.com/jiangshiyong/phantomjs/archive/2.1.1.tar.gz \
         && tar xavf phantomjs.tar.bz2 --strip-components 1 \
-        && ln -s /opt/phantomjs/bin/phantomjs /usr/local/bin/phantomjs \
+        && ln -s /opt/phantomjs/phantomjs /usr/local/bin/phantomjs \
         && rm phantomjs.tar.bz2
 
 
